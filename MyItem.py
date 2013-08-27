@@ -4,13 +4,13 @@ Created on 2013-6-16
 
 @author: Anderson
 '''
-from PyQt4 import QtCore, QtGui
+from PyQt4 import QtGui
+
 
 class MyItem(QtGui.QGraphicsPixmapItem):
     '''
     classdocs
     '''
-
 
     def __init__(self, pixmap, parent=None, scene=None):
         '''
@@ -19,8 +19,8 @@ class MyItem(QtGui.QGraphicsPixmapItem):
         QtGui.QGraphicsPixmapItem.__init__(self, pixmap, parent=None, scene=None)
         self.isEmpty = True
         self.pixmapEmpty = QtGui.QPixmap("empty.jpg")
-        self.pixmapFull  = QtGui.QPixmap("full.jpg")
-    
+        self.pixmapFull = QtGui.QPixmap("full.jpg")
+
     def mousePressEvent(self, event):
         super(MyItem, self).mousePressEvent(event)
         if self.isEmpty:
@@ -29,4 +29,3 @@ class MyItem(QtGui.QGraphicsPixmapItem):
         else:
             self.setPixmap(self.pixmapEmpty)
             self.isEmpty = True
-        

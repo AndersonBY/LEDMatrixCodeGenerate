@@ -3,8 +3,8 @@ from cx_Freeze import setup, Executable
 
 buildOptions = dict(
         compressed = True,
-        includes = ["atexit"],
-#         excludes = ['tk', '_tkagg', '_gtkagg', '_gtk', 'tcl'],
+        includes = ["re"],
+        excludes = ['tk', '_tkagg', '_gtkagg', '_gtk', 'tcl'],
         # include_files = [(matplotlib.get_data_path(), "mpl-data")],
         path = sys.path)
 
