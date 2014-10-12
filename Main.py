@@ -10,11 +10,11 @@ from MainWindowRaw import Ui_MainWindow
 from MyItem import MyItem
 
 
-class   MyMainWindow(Ui_MainWindow):
+class MyMainWindow(Ui_MainWindow):
 
     def __init__(self, parent=None):
         super(MyMainWindow, self).__init__()
-        #QtGui.QMainWindow.__init__(self,parent)
+        # QtGui.QMainWindow.__init__(self,parent)
         self.ui = Ui_MainWindow(self)
         self.ui.setupUi(self)
 
